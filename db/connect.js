@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const connectDB = async () => {
   const password = process.env.DB_PASSWORD;
-  const uri = `mongodb+srv://user:${password}@lyricsapi.qnxlq.mongodb.net/?retryWrites=true&w=majority&appName=LyricsAPI`;
+  const uri = process.env.DB_URL;
 
   try {
     await mongoose.connect(uri);
