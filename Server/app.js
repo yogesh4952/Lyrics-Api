@@ -3,6 +3,14 @@ const app = express();
 require("dotenv").config();
 const lyrics_route = require("./routes/lyricsRoute");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5500", // Adjust this to match your frontend's URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 app.use(bodyParser.json());
 //Database connection

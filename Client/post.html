@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="post.js" defer></script>
+  </head>
+  <body>
+    <form id="form">
+      <div>
+        <label for="SongTitle">SongTitle:</label>
+        <input
+          type="text"
+          required
+          id="SongTitle"
+          placeholder="Enter SongTitle Here"
+        />
+      </div>
+
+      <div>
+        <label for="artist">Artist:</label>
+        <input
+          type="text"
+          id="artist"
+          required
+          placeholder="Enter artist name Here"
+        />
+      </div>
+
+      <div>
+        <label for="album">Album:</label>
+        <input type="text" id="album" placeholder="Enter artist name Here" />
+      </div>
+
+      <div>
+        <label for="genre">Genre:</label>
+        <input
+          type="text"
+          required
+          id="genre"
+          placeholder="Enter genre name Here"
+        />
+      </div>
+
+      <div>
+        <label for="lyrics">Lyrics:</label>
+        <textarea id="lyrics"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="responseMessage"></p>
+  </body>
+</html>

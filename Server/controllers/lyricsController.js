@@ -37,7 +37,7 @@ exports.getAllLyrics = async (req, res) => {
   }
 
   let page = Number(req.query.page) || 1;
-  let limit = Number(req.query.limit) || 3;
+  let limit = Number(req.query.limit) || 10;
   let skip = (page - 1) * limit;
   apiResult = apiResult.skip(skip).limit(limit);
 
@@ -78,6 +78,7 @@ exports.updateLyrics = async (req, res) => {
 exports.deleteLyrics = async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(typeof id);
     const deleteData = await Lyrics.findByIdAndDelete(id);
     if (!deleteData) {
       return res.status(404).send("Cannot find data");
@@ -91,6 +92,7 @@ exports.deleteLyrics = async (req, res) => {
 exports.createLyrics = async (req, res) => {
   try {
     const newLyrics = req.body;
+    console.log("Received request body: ", newLyrics);
     const existingLyrics = await Lyrics.findOne({
       songTitle: newLyrics.songTitle,
     });
@@ -99,6 +101,11 @@ exports.createLyrics = async (req, res) => {
     }
     const small = new Lyrics(newLyrics);
     await small.save();
+    console.log("Lyrics Saved: ", small);
+    res.status(201).json({
+      message: "Lyrics successfully added",
+      data: small,
+    });
   } catch (err) {
     console.error("Internal server error", err);
     res.status(500).send("Internal server error");

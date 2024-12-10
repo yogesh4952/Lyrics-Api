@@ -1,29 +1,5 @@
 [
   {
-    "_id": "6757acdcffc3189634e8d704",
-    "songTitle": "Blinding Lights",
-    "artist": "The Weeknd",
-    "album": "After Hours",
-    "releaseDate": "2019-11-29T00:00:00.000Z",
-    "genre": "Pop",
-    "lyrics": "I said, ooh, I'm blinded by the lights, No, I can't sleep until I feel your touch...",
-    "language": "English",
-    "songDuration": 200,
-    "rating": 4.7,
-    "views": 1200000,
-    "songURL": "https://example.com/blindinglights",
-    "coverArtURL": "https://example.com/coverArt/blindinglights.jpg",
-    "createdAt": "2024-12-09T12:00:00.000Z",
-    "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": [
-      "pop",
-      "90s",
-      "retro",
-      "dance"
-    ],
-    "__v": 0
-  },
-  {
     "_id": "6757acdcffc3189634e8d703",
     "songTitle": "Shape of You",
     "artist": "Ed Sheeran",
@@ -39,12 +15,7 @@
     "coverArtURL": "https://example.com/coverArt/shapeofyou.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": [
-      "romantic",
-      "love",
-      "pop",
-      "upbeat"
-    ],
+    "tags": ["romantic", "love", "pop", "upbeat"],
     "__v": 0
   },
   {
@@ -63,12 +34,7 @@
     "coverArtURL": "https://example.com/coverArt/badguy.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": [
-      "pop",
-      "alternative",
-      "dark",
-      "edgy"
-    ],
+    "tags": ["pop", "alternative", "dark", "edgy"],
     "__v": 0
   },
   {
@@ -87,12 +53,7 @@
     "coverArtURL": "https://example.com/coverArt/uptownfunk.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": [
-      "funk",
-      "pop",
-      "dance",
-      "party"
-    ],
+    "tags": ["funk", "pop", "dance", "party"],
     "__v": 0
   },
   {
@@ -108,10 +69,7 @@
     "songURL": "https://www.youtube.com/watch?v=Ri7-vnrJD3k",
     "createdAt": "2024-12-10T02:52:11.422Z",
     "updatedAt": "2024-12-10T02:52:11.422Z",
-    "tags": [
-      "pop",
-      "acoustic"
-    ],
+    "tags": ["pop", "acoustic"],
     "__v": 0
   },
   {
@@ -130,12 +88,7 @@
     "coverArtURL": "https://example.com/coverArt/someonelikeyou.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": [
-      "sad",
-      "love",
-      "pop",
-      "ballad"
-    ],
+    "tags": ["sad", "love", "pop", "ballad"],
     "__v": 0
   },
   {
@@ -154,12 +107,7 @@
     "coverArtURL": "https://example.com/coverArt/levitating.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": [
-      "dance",
-      "pop",
-      "upbeat",
-      "party"
-    ],
+    "tags": ["dance", "pop", "upbeat", "party"],
     "__v": 0
   },
   {
@@ -174,10 +122,22 @@
     "views": 0,
     "createdAt": "2024-12-10T03:17:15.907Z",
     "updatedAt": "2024-12-10T03:17:15.907Z",
-    "tags": [
-      "pop",
-      "lofi"
-    ],
+    "tags": ["pop", "lofi"],
+    "__v": 0
+  },
+  {
+    "_id": "6757ee51d90d14b9c0cc5037",
+    "songTitle": "Jiunu nai hola",
+    "artist": "Tribar Rain",
+    "album": "",
+    "genre": "sad",
+    "lyrics": "Jiunu nai hola yesari nai Yo geet gaudai aru lai sunaudai Sansaar le dekhena timro khusi uu sanga thyo vanera Aafailai bahana banayera, bhanthe aru ko parwaa thiyena Sabailai vayeko thyo malai pani Ek samaya ma testai maaya Kaha lane hola, yo samaya le malai ? Parkhindai chu sabai ko bheerma Aafno bhanu tara koslai ? Aafno bhanu tara koslai ? Uu yeaaaaâ€¦.. Jiunu nai hola yesari nai Yo geet gaudai aru lai sunaudai Sansaar le dekhena mero khusi timi sanga thyo vanera Aafailai bahana banayera, bhanthe aru ko parwaa thiyena Sabailai vayeko thyo malai pani Ek samaya ma testai maaya Kaha lane hola, yo samaya le malai ? Parkhindai chu sabai ko bheerma Aafno bhanu tara koslai ? Aafno bhanu tara koslai ? Jiunu nai hola yesari nai Yo geet gaudai aru lai sunaudai Sansaar le dekhena timro khusi ma sangai thyo vanera Jiunu nai hola Yesari nai Jiunu nai hola yesari nai Yo geet gaudai aru lai sunaudai ",
+    "language": "English",
+    "rating": 0,
+    "views": 0,
+    "createdAt": "2024-12-10T07:26:57.786Z",
+    "updatedAt": "2024-12-10T07:26:57.787Z",
+    "tags": ["pop", "lofi"],
     "__v": 0
   }
 ]
