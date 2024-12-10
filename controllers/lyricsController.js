@@ -1,6 +1,11 @@
 const Lyrics = require("../models/lyrics.models");
+const fs = require("fs");
+let data = require("../lyrics.json");
+const path = require("path");
+const { json } = require("express");
+const lyricsModels = require("../models/lyrics.models");
 
-const getAllLyrics = async (req, res) => {
+exports.getAllLyrics = async (req, res) => {
   const { songTitle, artist, album, genre, sort, select } = req.query;
 
   const queryObject = {};
@@ -41,7 +46,66 @@ const getAllLyrics = async (req, res) => {
   res.status(200).json({ myLyrics });
 };
 
-const getAllLyricsTesting = async (req, res) => {
+exports.getSingleLyrics = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const lyrics = await Lyrics.findById(id);
+
+    if (lyrics) {
+      return res.status(200).json(lyrics);
+    }
+    return res.status(404).send("Item not found");
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch lyrics", err });
+  }
+};
+
+exports.updateLyrics = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updateData = req.body;
+    const lyrics = await Lyrics.findByIdAndUpdate(id, updateData);
+    if (!lyrics) {
+      return res.status(404).send("Lyrics cant found");
+    }
+    return res.status(200).json(lyrics);
+  } catch (err) {
+    res.status(504).send("Internal server error", err);
+  }
+};
+
+exports.deleteLyrics = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteData = await Lyrics.findByIdAndDelete(id);
+    if (!deleteData) {
+      return res.status(404).send("Cannot find data");
+    }
+    return res.status(204).json({ msg: "Deletd succesffuly" });
+  } catch (err) {
+    return res.status(500).send("Internal server error", err);
+  }
+};
+
+exports.createLyrics = async (req, res) => {
+  try {
+    const newLyrics = req.body;
+    const existingLyrics = await Lyrics.findOne({
+      songTitle: newLyrics.songTitle,
+    });
+    if (existingLyrics) {
+      return res.status(201).send("Lyrics already exist in Database");
+    }
+    const small = new Lyrics(newLyrics);
+    await small.save();
+  } catch (err) {
+    console.error("Internal server error", err);
+    res.status(500).send("Internal server error");
+  }
+};
+
+exports.getAllLyricsTesting = async (req, res) => {
   const { artist, songTitle, album, genre, language, sort, select } = req.query;
   const queryObject = {};
 
@@ -87,5 +151,3 @@ const getAllLyricsTesting = async (req, res) => {
 
   res.status(200).json({ myLyrics });
 };
-
-module.exports = { getAllLyrics, getAllLyricsTesting };

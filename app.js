@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
+const lyrics_route = require("./routes/lyricsRoute");
+const bodyParser = require("body-parser");
 
+app.use(bodyParser.json());
 //Database connection
 const connectDB = require("./db/connect");
 connectDB();
@@ -13,7 +16,6 @@ app.get("/", (req, res) => {
 });
 
 //route handler
-const lyrics_route = require("./routes/lyricsRoute");
 app.use("/api/lyrics", lyrics_route);
 
 //server start

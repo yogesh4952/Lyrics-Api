@@ -15,7 +15,12 @@
     "coverArtURL": "https://example.com/coverArt/blindinglights.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": ["pop", "90s", "retro", "dance"],
+    "tags": [
+      "pop",
+      "90s",
+      "retro",
+      "dance"
+    ],
     "__v": 0
   },
   {
@@ -34,7 +39,12 @@
     "coverArtURL": "https://example.com/coverArt/shapeofyou.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": ["romantic", "love", "pop", "upbeat"],
+    "tags": [
+      "romantic",
+      "love",
+      "pop",
+      "upbeat"
+    ],
     "__v": 0
   },
   {
@@ -53,7 +63,12 @@
     "coverArtURL": "https://example.com/coverArt/badguy.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": ["pop", "alternative", "dark", "edgy"],
+    "tags": [
+      "pop",
+      "alternative",
+      "dark",
+      "edgy"
+    ],
     "__v": 0
   },
   {
@@ -72,7 +87,12 @@
     "coverArtURL": "https://example.com/coverArt/uptownfunk.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": ["funk", "pop", "dance", "party"],
+    "tags": [
+      "funk",
+      "pop",
+      "dance",
+      "party"
+    ],
     "__v": 0
   },
   {
@@ -88,7 +108,10 @@
     "songURL": "https://www.youtube.com/watch?v=Ri7-vnrJD3k",
     "createdAt": "2024-12-10T02:52:11.422Z",
     "updatedAt": "2024-12-10T02:52:11.422Z",
-    "tags": ["pop", "acoustic"],
+    "tags": [
+      "pop",
+      "acoustic"
+    ],
     "__v": 0
   },
   {
@@ -107,7 +130,12 @@
     "coverArtURL": "https://example.com/coverArt/someonelikeyou.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": ["sad", "love", "pop", "ballad"],
+    "tags": [
+      "sad",
+      "love",
+      "pop",
+      "ballad"
+    ],
     "__v": 0
   },
   {
@@ -126,7 +154,12 @@
     "coverArtURL": "https://example.com/coverArt/levitating.jpg",
     "createdAt": "2024-12-09T12:00:00.000Z",
     "updatedAt": "2024-12-09T12:00:00.000Z",
-    "tags": ["dance", "pop", "upbeat", "party"],
+    "tags": [
+      "dance",
+      "pop",
+      "upbeat",
+      "party"
+    ],
     "__v": 0
   },
   {
@@ -141,7 +174,10 @@
     "views": 0,
     "createdAt": "2024-12-10T03:17:15.907Z",
     "updatedAt": "2024-12-10T03:17:15.907Z",
-    "tags": ["pop", "lofi"],
+    "tags": [
+      "pop",
+      "lofi"
+    ],
     "__v": 0
   }
 ]
