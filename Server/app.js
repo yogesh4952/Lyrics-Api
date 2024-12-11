@@ -6,7 +6,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500", // Adjust this to match your frontend's URL
+    origin: [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173", // Adjust this to match your frontend's URL
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
