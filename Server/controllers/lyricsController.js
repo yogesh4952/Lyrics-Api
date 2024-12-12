@@ -85,7 +85,7 @@ exports.deleteLyrics = async (req, res) => {
     }
     return res.status(204).json({ msg: "Deletd succesffuly" });
   } catch (err) {
-    return res.status(500).send("Internal server error", err);
+    return res.status(500).send({ messgae: "Internal server error" });
   }
 };
 

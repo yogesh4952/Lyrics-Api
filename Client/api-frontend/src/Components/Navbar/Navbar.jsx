@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
-    <nav className="bg-black border text-white w-[100%] h-14 flex items-center justify-around">
+    <nav className="bg-black shadow-gray-300 shadow-sm text-white w-[100%] sticky top-0 left-0 h-14 flex items-center justify-around">
       <div>
         <h1 className="text-xl sm:text-3xl text-gray-300 italic">
           yogeh<span className="text-red-500 font-bold">S</span>hah
