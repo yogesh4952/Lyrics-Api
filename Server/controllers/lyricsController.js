@@ -78,7 +78,6 @@ exports.updateLyrics = async (req, res) => {
 exports.deleteLyrics = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(typeof id);
     const deleteData = await Lyrics.findByIdAndDelete(id);
     if (!deleteData) {
       return res.status(404).send("Cannot find data");

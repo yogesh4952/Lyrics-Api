@@ -23,7 +23,7 @@ connectDB();
 //port declaration
 const port = 5000 || process.env.PORT;
 app.get("/", (req, res) => {
-  res.send("I am live");
+  res.status(200).send("I am live");
 });
 
 //route handler
