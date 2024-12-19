@@ -4,6 +4,20 @@ function Delete() {
   const [error, setError] = useState(null);
   const [objectId, setObjectId] = useState("");
   const [loader, setLoader] = useState(false);
+  const [filterInput, setFilterInput] = useState("");
+
+  const [filteredLyrics, setFilteredLyrics] = useState([]);
+
+const filterChange = (e) => {
+  setFilterInput(e.target.value);
+  setFilteredLyrics(
+    lyrics.filter((lyric) =>
+      lyric.songTitle.toLowerCase().includes(e.target.value.toLowerCase()) ||
+      lyric.artist.toLowerCase().includes(e.target.value.toLowerCase())
+    )
+  );
+};
+
 
   useEffect(() => {
     setLoader(true);
@@ -64,34 +78,54 @@ function Delete() {
   };
   return (
     <div className="grid px-4  sm:grid-cols-2 w-[100%] max-h-[100%] py-2 text-white">
-      <div id="left" className="gap-4 flex flex-col justify-center  mb-2">
+
+      <div id="search">
+        <input className="text-red-500" type="text" value={filterInput} onChange={filterChange}/>
+      </div>
+      <div id="left" className="flex flex-col justify-center gap-4 mb-2">
         {loader ? (
-          <div className="flex  justify-center items-center">
+          <div className="flex items-center justify-center">
             <img src="/gifNobg.gif" alt="loading Please wait" />
           </div>
-        ) : (
-          lyrics.map((perLyrics, index) => (
+        ) : filteredLyrics && filterInput ? (
+          filteredLyrics.map((perLyrics,index)=>(
             <div className="flex flex-col justify-center" key={index}>
-              <h1 className="text-gray-300 sm:text-sm md:text-xl italic font-serif ">
+              <h1 className="font-serif italic text-gray-300 sm:text-sm md:text-xl ">
                 {perLyrics.songTitle} -<span>{perLyrics.artist}</span>
-              </h1>
+              </h1>There isn’t anything to compare.
+              yogesh4952:main and aryansaud-80:edited are identical.
               <input
-                className="text-white px-4 py-2 rounded-xl font-bold overflow-auto bg-gray-500"
+                className="px-4 py-2 overflow-auto font-bold text-white bg-gray-500 rounded-xl"
                 type="text"
                 value={perLyrics._id}
                 readOnly
               />
             </div>
           ))
+        ) : (
+          lyrics.map((perLyrics, index) => (
+            <div className="flex flex-col justify-center" key={index}>
+              <h1 className="font-serif italic text-gray-300 sm:text-sm md:text-xl ">
+                {perLyrics.songTitle} -<span>{perLyrics.artist}</span>
+              </h1>
+              <input
+                className="px-4 py-2 overflow-auto font-bold text-white bg-gray-500 rounded-xl"
+                type="text"
+                value={perLyrics._id}
+                readOnly
+              />
+            </div>
+        
+          ))
         )}
       </div>
       <form
         id="right"
-        className="flex flex-col justify-center items-center "
+        className="flex flex-col items-center justify-center "
         onSubmit={HandleSumbmit}
       >
         <div>
-          <label className="font-mono font-semibold text-xl" htmlFor="objectId">
+          <label className="font-mono text-xl font-semibold" htmlFor="objectId">
             Enter Lyrics id here:
           </label>{" "}
           <br />
@@ -99,12 +133,12 @@ function Delete() {
             onChange={HandleInputChange}
             type="text"
             id="objectId"
-            className="md:min-w-80 rounded-md px-1 py-1 text-gray-900 font-mono font-semibold"
+            className="px-1 py-1 font-mono font-semibold text-gray-900 rounded-md md:min-w-80"
           />
         </div>
         <button
           type="submit"
-          className="px-4 bg-red-500 py-2 mt-4 rounded-md font-bold"
+          className="px-4 py-2 mt-4 font-bold bg-red-500 rounded-md"
         >
           Delete
         </button>
