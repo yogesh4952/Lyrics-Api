@@ -1,0 +1,52 @@
+input {
+  width: 100%; /* Make sure input takes full width */
+  border-radius: 8px;
+  outline: none;
+}
+
+input {
+  border: 0.01px solid black;
+}
+
+input:focus {
+  border: 0.01px solid blue;
+}
+
+.inputField {
+  width: 100%; /* Ensures the field container takes the full width */
+  display: flex;
+
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start; /* Align labels and inputs at the start */
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.5em;
+  cursor: grab;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-block: 0.2em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: grabbing;
+}

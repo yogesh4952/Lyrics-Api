@@ -1,0 +1,21 @@
+.active {
+  color: red;
+}
+.nav {
+  position: relative;
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* You can adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  /* background-color: white; */
+  transition: width 0.3s ease; /* Add transition to animate the width */
+}
+
+.nav:hover::before {
+  width: 100%; /* On hover, the width expands to 100% */
+}
